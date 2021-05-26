@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!ELEMENT Dialogue (Banner?,Settings)>
+<!ELEMENT Banner (Title,Heading,Summary,Button+)>
+<!ELEMENT Title (#PCDATA)>
+<!ELEMENT Heading (#PCDATA)>
+<!ELEMENT Summary (#PCDATA)>
+<!ELEMENT Button (#PCDATA)>
+<!ATTLIST Button type (agree|disagree|customize|save) #IMPLIED>
+
+<!ELEMENT Settings (Button+,ConsentOptions,LegitimateInterestsOptions?,VendorOptions)>
+<!ELEMENT ConsentOptions (Summary,Purpose+)>
+<!ELEMENT LegitimateInterestsOptions (Summary,Purpose+)>
+<!ELEMENT VendorOptions (Vendor)>
+<!ELEMENT Vendor (VendorName,Toggle,Description)+>
+<!ELEMENT VendorName (#PCDATA)>
+<!ATTLIST Vendor id CDATA #REQUIRED>
+
+<!ELEMENT Purpose (Info,Toggle+,Description,VendorList?)>
+<!ATTLIST Purpose
+  id CDATA #REQUIRED
+  type (CDATA|parent|child) #IMPLIED>
+
+<!ELEMENT Info (#PCDATA)>
+<!ELEMENT Description (#PCDATA)>
+<!ELEMENT VendorList (#PCDATA)>
+<!ELEMENT Toggle (#PCDATA)>
+<!ATTLIST Toggle status (enabled|disabled) #REQUIRED>

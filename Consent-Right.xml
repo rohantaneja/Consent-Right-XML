@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Dialogue>
+    <Banner>
+        <!-- Designing a Consent Dialogue for rohantaneja.dev -->
+        <!-- Name of Publisher or Website Owner -->
+        <Title>rt. consent dialogue</Title>
+        <!-- Heading for Data Privacy or Accepting Cookies for Data Processing & Collection -->
+        <Heading>Accessing Our Website? Here Have Some Cookies</Heading>
+        <!-- Information on cookie collection for data privacy, 
+        processing and collection based on the selected purposes. 
+        Allowing the publisher and trackers to attain user data. 
+        -->
+        <Summary>Relevant Privacy and Data Processing Summary</Summary>
+        <!-- Allow Data Processing and Collection - Agree or Agree All Cookies -->
+        <Button type="agree">Accept All</Button>
+        <!-- Customize Purposes and Vendors - Selective Consent Choices -->
+        <Button type="customize">More Options</Button>
+        <!-- Disallow any data processing - Disagree Cookies or Close Dialogue-->
+        <Button type="disagree">Reject All</Button>
+    </Banner>
+
+    <Settings>
+        <!-- Clear Data Processing and Collection Toggles - Object or Reject All -->
+        <Button type="disagree">Object All</Button>
+        <!-- Customize Purposes and Vendors - Selective Consent Choices -->
+        <Button type="agree">Agree All</Button>
+        <!-- Save Customized Consent Settings -->
+        <Button type="save">Save and Exit</Button>
+        <ConsentOptions>
+            <Summary>Relevant Consent Oriented Summary</Summary>
+            <Purpose id = "1010" type = "parent">
+                <Info>We store your location and use device identity for analytics.</Info>
+                <Toggle status = "disabled"  >OFF</Toggle>
+                <Description>Relevant Information</Description>
+            </Purpose>
+            <!-- Children Purpose(s) -->
+            <Purpose id = "1011"  type = "child">
+                <Info>Use precise geolocation data</Info>
+                <Toggle status = "disabled" >OFF</Toggle>
+                <Description>Relevant Information</Description>
+                <VendorList>List of vendors able to access your information</VendorList>
+            </Purpose>
+            <Purpose id = "1012" type = "child" >
+                <Info>Actively scan device characteristics for identification</Info>
+                <Toggle status = "disabled">OFF</Toggle>
+                <Description>Relevant Information</Description>
+                <VendorList>List of vendors able to access your information</VendorList>
+            </Purpose>
+        </ConsentOptions>
+
+        <LegitimateInterestsOptions>
+            <Summary>Summary promoting use of Legitimate Interests</Summary>
+            <Purpose id = "201">
+                <Info>Select basic ads</Info>                
+                <Toggle status = "enabled">OBJECT</Toggle>
+                <Description>Relevant Information</Description>
+                <VendorList>List of vendors able to access your information</VendorList>
+            </Purpose>
+        </LegitimateInterestsOptions>
+        
+        <VendorOptions>
+            <Vendor id="1">
+                <VendorName>Publisher Name</VendorName>
+                <Toggle status = "disabled">OFF</Toggle>
+                <Description>Relevant Information</Description>
+            </Vendor>
+        </VendorOptions>
+    </Settings>
+</Dialogue>
